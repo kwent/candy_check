@@ -58,6 +58,12 @@ module CandyCheck
         read('item_id')
       end
 
+      # The app's web_order_line_item_id id of the product
+      # @return [String]
+      def item_id
+        read('web_order_line_item_id')
+      end
+
       # The quantity of the product
       # @return [Fixnum]
       def quantity
@@ -95,6 +101,18 @@ module CandyCheck
       def is_trial_period
         # rubocop:enable PredicateName
         read_bool('is_trial_period')
+      end
+
+      # rubocop:disable PredicateName
+      def is_in_intro_offer_period
+        # rubocop:enable PredicateName
+        read_bool('is_in_intro_offer_period')
+      end
+
+      # rubocop:disable PredicateName
+      def is_in_billing_retry_period
+        # rubocop:enable PredicateName
+        read_bool('is_in_billing_retry_period')
       end
     end
   end
