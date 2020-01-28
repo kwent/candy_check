@@ -60,7 +60,7 @@ module CandyCheck
 
       # The app's web_order_line_item_id id of the product
       # @return [String]
-      def item_id
+      def web_order_line_item_id
         read('web_order_line_item_id')
       end
 
